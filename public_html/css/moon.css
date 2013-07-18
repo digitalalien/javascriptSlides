@@ -45,10 +45,10 @@ body {
   position: absolute;
   overflow: hidden;
   width: 900px;
-  height: 700px;
+  height: 800px;
   left: 50%;
   top: 50%;
-  margin-top: -350px;
+  margin-top: -400px;
   background-color: #eee;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -353,6 +353,11 @@ a {
   line-height: 100%;
   border-bottom: none;
 }
+
+pre li{
+	list-style: decimal;
+	padding: 3px;
+	}
 
 li {
   list-style: none;
