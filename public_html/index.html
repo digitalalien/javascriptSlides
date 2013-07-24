@@ -6,9 +6,6 @@
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css">
     <link id="prettify-link" href="css/prettify.css" rel="stylesheet" disabled="">
 	<link href="src/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link href="css/moon.css" class="theme" rel="stylesheet">
-    <link href="css/sand.css" class="theme" rel="stylesheet">
-    <link href="css/sea_wave.css" class="theme" rel="stylesheet">
     <link href="css/default.css" class="theme" rel="stylesheet" media="screen">
     <link href="css/common.css" rel="stylesheet" media="screen">
   <script style="" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/13/6/%7Bcommon,util,stats%7D.js" charset="UTF-8" type="text/javascript"></script></head>
@@ -438,20 +435,19 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
                 }
             </style>
             <section>
-                <h1>MadLibs</h1>
+                <h1>SubShop</h1>
                 <ul>
                     <li>
                         Store the folowing in variables:
                         <ul>
-                            <li>name</li>
-                            <li>another name</li>
-                             <li>a number</li>
-                             <li>verb</li>
-                            <li>noun</li>
+                            <li>Sandwich name</li>
+                            <li>Quantity</li>
+                            <li>Price</li>
+                            <li>Get total price</li>
                         </ul>
                     </li>
                     <li>
-                        Output to the screen: "(<i>name</i>) and (<i>another name</i>) were walking down the street when they saw (<i>number</i>) (<i>verb</i>) (<i>noun</i>)"
+                        Output to the screen: "Order: (sandwich name) Quantity: (quantity) Price: (price) = Total: (total)"
                     </li>
                 </ul>
             </section>
@@ -461,13 +457,12 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
           <header>Excercise 1 Answer</header>
           <section>
 <pre class="prettyprint linenums">
-var name = 'Andrew';
-var anotherName = 'Amanda';
-var number = 3;
-var verb = 'flying';
-var noun = 'turtles';
+var sandwich = 'Ham and Cheese';
+var quantity = 3;
+var price = 4.99;
+var total = quantity*price;
 
-var sentence = name + ' and ' + anotherName + ' were walking down the street when they saw ' + number + ' ' + verb + ' ' + noun + '.';
+var sentence = "Order: " + sandwich + " Quantity: " + quantity + " Price: " + price + " Total: " + total";
 
 document.write(sentence);
 </pre>
