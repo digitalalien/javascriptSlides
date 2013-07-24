@@ -29,7 +29,7 @@
     <div class="presentation">
       <div id="presentation-counter">1</div>
       <div style="display: block;" class="slides">
-        <div class="slide" id="landing-slide">
+        <!--Landing Slide--><div class="slide" id="landing-slide">
           <style>
             #landing-slide h1, #landing-slide h2 {
               color: black;
@@ -84,8 +84,8 @@
           </aside> 
         </div>
 		
-		<div class="slide" id="table-of-contents">
-          <header><h1>Today, we will cover...</h1></header>
+		<!--Table of contents--><div class="slide" id="table-of-contents">
+          <header>Today, we will cover...</header>
           <style>
             #toc-list > li {
               font-size: 26px;
@@ -111,7 +111,7 @@
           </section>
         <span class="counter"></span></div>
 		
-         <div class="slide" id="what-you-should-know-slide">
+         <!--What you should know slide--><div class="slide" id="what-you-should-know-slide">
 			<style>
 				#what-is-slide p{
 					font-size: 32px;
@@ -135,7 +135,7 @@
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="what-is-slide">
+		<!--What is slide--><div class="slide" id="what-is-slide">
 			<style>
 				#what-is-slide p{
 					font-size: 32px;
@@ -147,12 +147,11 @@
             <p>Javascript is an easy-to-use programming language that can be embedded in the header of your web pages. 
 			It can enhance the dynamics and interactive features of your page by allowing you to perform calculations, 
 			check forms, write interactive games, add special effects, customize graphics selections, create security passwords and more.
-			</p><p>
-			JavaScript is inserted into HTML using <code>&lt;script&gt;&lt;/script&gt;</code> tags.</p>
+			</p>
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="java-vs-javascript-slide">
+		<!--java vs javascript slide--><div class="slide" id="java-vs-javascript-slide">
           <header>Java vs. Javascript</header>
           <section>
             <p>
@@ -162,7 +161,7 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
           </section>
         <span class="counter"></span></div>
 
-        <div class="slide" id="oop-slide">
+        <!--object oriented programming slide--><div class="slide" id="oop-slide">
           <header>Object Oriented Programming</header>
           <section>
             <p>OOP is a programming technique designed to simplify complicated programming concepts.</p>
@@ -184,45 +183,63 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
 					Methods - Methods are actions that objects can perform.
 				</li>
 			</ul>
-<pre>
-	&lt;script&gt;
-		var myObject = {
-				//This is a property
-				name : "myObject",
-				//This is a method, it gets the name property of myObject
-				getName : function(){
-					alert('name: ' + this.name);
-				}
-			}
-	&lt;/script&gt;
-</pre>
+            <div class="well">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <h2>Properties:</h2>
+                        <p>car.name = Kia</p>
+                        <p>car.model = Optima</p>
+                        <p>car.hp = 270</p>
+                        <p>car.color = black</p>
+                    </div>
+                    <div class="span6">
+                        <img src='img/kia.png'/>
+                    </div>
+                    <div class="span3">
+                        <h2>Methods</h2>
+                        <p>car.start()</p>
+                        <p>car.drive()</p>
+                        <p>car.stop()</p>
+                        <p>car.accelerate()</p>
+                    </div>
+                </div>
+            </div>
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="events-slide">
-          <header>Events</header>
-          <section>
-            <p>
-			Events are how we trigger our functions to run. The easiest example is a button, whose definition includes the words onClick="run_my_function()". <br/><br/>
-			The onClick event, as its name implies, will run the function when the user clicks on the button. Other events include OnMouseOver, OnMouseOut, OnFocus, OnBlur, OnLoad, and OnUnload. 
-			</p>
-			<br/>
-<pre>
-	&lt;script&gt;
-		element = document.getElementById('myButton');
-		element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-	&lt;/script&gt;
-	<br/>
-	<button id="myButton">Click Me!</button>
-	<script>
-		element = document.getElementById('myButton');
-		element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-	</script>
-</pre>
-          </section>
-        <span class="counter"></span></div>
+		<!--client vs server side--><div class="slide" id="client-vs-server-slide">
+            <header>
+                Client Side Vs. Server Side
+            </header>
+            <section>
+                <p>
+                    <strong>Client Side</strong> refers to the web browser that is viewing a web site (the users computer).
+                    <strong>Server Side</strong> refers to the server that is hosting the website.
+                </p>
+                <div class="well">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <h2>Client Side:</h2>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="span6">
+                            <img src='img/client_server.png'/>
+                        </div>
+                        <div class="span3">
+                            <h2>Server Side:</h2>
+                            <p>PHP</p>
+                            <p>Java</p>
+                            <p>ASP.NET</p>
+                            <p>Ruby</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</div>
 		
-		<div class="slide" id="running-javascript-code-slide">
+        <!--running javascript--><div class="slide" id="running-javascript-code-slide">
           <header>Running Javascript Code</header>
           <section>
             <p>
@@ -235,8 +252,34 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
 			</p>
           </section>
         <span class="counter"></span></div>
-		
-		<div class="slide" id="commenting-code-slide">
+        
+        <!--events--><div class="slide" id="events-slide">
+          <header>Events</header>
+          <section>
+            <p>
+				Events are how we trigger our functions to run. The easiest example is a button, whose definition includes the words onClick="run_my_function()".
+			</p>
+			<p>
+			The onClick event, as its name implies, will run the function when the user clicks on the button. Other events include OnMouseOver, OnMouseOut, OnFocus, OnBlur, OnLoad, and OnUnload. 
+			</p>
+<pre class="prettyprint linenums">
+&lt;button onclick="run_my_function();"&gt;Click Me&lt;/button&gt;
+</pre>
+			
+<pre class="prettyprint linenums">
+element = document.getElementById('myButton');
+element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
+<br/>
+</pre>
+<button id="myButton">Click Me!</button>
+<script>
+    element = document.getElementById('myButton');
+    element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
+</script>
+          </section>
+        <span class="counter"></span></div>
+        
+        <!--commenting code--><div class="slide" id="commenting-code-slide">
           <header>Commenting Code</header>
           <section>
             <p>
@@ -245,62 +288,193 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
 			</p>
           </section>
         <span class="counter"></span></div>
-		
-		<div class="slide" id="identifiers-slide">
-          <header>Identifiers</header>
-          <section>
-            <p>
-			Identifiers are used to give variables and functions a unique name so they can later  be referred to by that name.
-			The name of the identifiers must follow these rules:
-			<ul>
-				<li>Can not be a reserved word</li>
-				<li>Can only contain letters, numbers, dollar signs, and underscores</li>
-				<li>Can not start with a number</li>
-			</ul>
-			</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="variables-slide">
+        
+        <!--variables--><div class="slide" id="variables-slide">
           <header>Variables</header>
           <section>
             <p>
+            Variables are used to store values.
+            </p>
+            <p>
 			Variables can be defined using multiple <code>var</code> statements or in a single combined statement.<br/>
-			Variables assigned without a value are given a value of <code>undefined</code>
-			<pre><code>&lt;script&gt;<br/>var y;<br/>y===undefined; //This statement is true<br/>&lt;/script&gt;</code></pre>
-			<pre><code>&lt;script&gt;var test = 1;<br/>&lt;/script&gt;</code></pre>
+            </p>
+            <p>
+                Declare then initialize
+            </p>
+<pre class="prettyprint linenums">
+    var y; //value is undefined
+    y = 5; //value is 5
+</pre>
+            <p>
+                Declare and initialize in one statement
 			</p>
+<pre class="prettyprint linenums">
+    var y = 5; //value is 5
+    console.log(y);
+</pre>
+            <p>
+                Variables can also store the results of expressions.
+            </p>
+<pre class="prettyprint linenums">
+    var y = 5+5; //y = 10
+    var x = 5*y; //x = 50
+</pre>
+<pre class="prettyprint linenums">
+    var name = "Andrew";
+    var welcomeMessage = 'Hello ' + name; //welcomeMessage = 'Hello Andrew'
+</pre>            
+           
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="types-slide">
-          <header>Types</header>
+        <!--variable names'--><div class='slide' id='variable-names-slide'>
+            <header>Variable Names</header>
+            <style>
+                #variable-names-slide li{
+                    font-size: 1.6em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <ul>
+                    <li>Variable names must begin with a letter, $ or _</li>
+                    <li>Variable names are case sensitive (g and G are not the same)</li>
+                    <li>Avoid reserved words (words used by Javascript ie: var, for, else)</li>
+                    <li>Choose meaningful words</li>
+                    <li>camelCase is preferred to under_score</li>
+                    <li>Be consistent with your naming conventions</li>
+                </ul>
+            </section>
+        </div>
+        
+		<!--types--><div class="slide" id="types-slide">
+          <header>Primitive Types</header>
           <section>
-            <p>
-			Types in JavaScript fall into two categories: primitives and objects.
-			</p>
-			<p>
-			Primitive types include -
-			</p>
 			<ul>
-				<li>String</li>
-				<li>Number</li>
-				<li>Boolean</li>
-				<li>null</li>
-				<li>undefined</li>
-			</ul>
-			<p>
-			Everything else in JavaScript is considered an object. 	
-			<br/><br/>
-			JavaScript has numerous built-in objects. We will mostly focus on:
-			</p>
-			<ul>
-			<li>Object</li>
-			<li>Array</li>
-			<li>Function</li>
+				<li>
+                    <h2>String: <small>Strings are wrapped in single or double quotation marks.</small></h2>
+<pre class="prettyprint linenums">
+    var welcome = "Welcome to learning JavaScript";
+    var location = "Velocity Southern Indiana";
+</pre>
+                </li>
+				<li>
+                    <h2>Number: <small>Numbers are positive or negative numeric values and include floating point values.</small></h2>
+<pre class="prettyprint linenums">
+    var pizzas = 8;
+    var cost = 8.99;
+</pre>
+                </li>
+				<li>
+                    <h2>Boolean: <small>Booleans are either true or false</small></h2>
+<pre class="prettyprint linenums">
+    var iLikeCats = false;
+    var iLikeDogs = true;
+</pre>
+                </li>
+				<li>
+                    <h2>null: <small>Null represents the absence of a value</small></h2>
+<pre class="prettyprint linenums">
+    var goodPlaceToEat = null;
+</pre>                    
+                </li>
+				<li>
+                  <h2>undefined: <small>Undefined represents a value that has not been defined</small></h2>
+<pre class="prettyprint linenums">
+    var gameSystem;
+</pre>
+                </li>
 			</ul>
           </section>
         <span class="counter"></span></div>
+        
+        <div class="slide" id="getting-results-slide">
+          <header>Seeing the results</header>
+          <section>
+              <p>
+                  In order to see the value of your variables you can use <code>console.log(variableName)</code>
+              </p>
+              <p>
+                  To see the console you must open your browsers developer tools. 
+              <ul class="listLarge">
+                  <li>Firefox you can hit Ctrl+Shift+J </li>
+                  <li>Chrome Ctrl+Shift+J</li>
+                  <li>IE 9+ hit F12 and choose the console tab</li>
+              </ul>
+              </p>
+          </section>
+        </div>
+        <!--questions and open pc--><div class="slide" id="questions-open-pc-slide">
+            <header>Any ?'s</header>
+            <section>
+                <img src="img/Dwight-question.jpg"/>
+            </section>
+        </div>
+		
+        <!--open laptops slide--><div class="slide" id="open-laptops-slide">
+            
+            <header>Open your laptops</header>
+            <section>
+                <h1>Connect to Wifi</h1>
+                <p>wifi name - pw:</p>
+                <h1>Open Notepad</h1>
+                <p>Create simple HTML page</p>
+<pre class="prittyprint linenums">
+&lt;html&gt;
+    &lt;body&gt;
+    
+    &lt;/body&gt;
+&lt/html&gt;
+</pre>
+            </section>
+        </div>
+        
+        <!-- variables exercise--><div class="slide" id="variables-excercise-slide">
+            <header>Excercise 1 - Variables </header>
+            <style>
+                #variables-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>MadLibs</h1>
+                <ul>
+                    <li>
+                        Store the folowing in variables:
+                        <ul>
+                            <li>name</li>
+                            <li>another name</li>
+                             <li>a number</li>
+                             <li>verb</li>
+                            <li>noun</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Output to the screen: "(<i>name</i>) and (<i>another name</i>) were walking down the street when they saw (<i>number</i>) (<i>verb</i>) (<i>noun</i>)"
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+		<div class="slide" id="variables-excercise-answer-slide">
+          <header>Excercise 1 Answer</header>
+          <section>
+<pre class="prettyprint linenums">
+var name = 'Andrew';
+var anotherName = 'Amanda';
+var number = 3;
+var verb = 'flying';
+var noun = 'turtles';
+
+var sentence = name + ' and ' + anotherName + ' were walking down the street when they saw ' + number + ' ' + verb + ' ' + noun + '.';
+
+document.write(sentence);
+</pre>
+          </section>
+        </div>
+				
+		
 		
 		<div class="slide" id="conditional-code-slide">
           <header>Conditional Code</header>

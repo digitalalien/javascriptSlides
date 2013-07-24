@@ -307,10 +307,10 @@ header {
 }
 
 h1 {
-  font-size: 100%;
-  display: inline;
+  font-size: 200%;
+  /*display: inline;*/
   font-weight: normal;
-  padding: 0;
+  padding: 20px 0 10px 0;
   margin: 0;
 }
 
@@ -361,7 +361,7 @@ pre li{
 
 li {
   list-style: none;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 button {
@@ -411,7 +411,7 @@ pre {
   font: 'Inconsolata';
   color: #000;
   text-align: left;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 10px;
   background: rgba(255, 204, 0, 0.05);
   border: 2px solid rgba(255, 204, 0, 0.3);
@@ -582,4 +582,13 @@ video {
 .sidebar {
   background-color: #F3F3F3;
   border-right: 5px solid #987;
+}
+
+.well{
+    background-color: #fff;
+}
+
+.listLarge li{
+    font-size: 1.6em;
+    line-height: 1.8em;
 }
