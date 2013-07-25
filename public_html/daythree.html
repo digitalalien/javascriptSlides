@@ -6,9 +6,6 @@
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css">
     <link id="prettify-link" href="css/prettify.css" rel="stylesheet" disabled="">
 	<link href="src/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link href="css/moon.css" class="theme" rel="stylesheet">
-    <link href="css/sand.css" class="theme" rel="stylesheet">
-    <link href="css/sea_wave.css" class="theme" rel="stylesheet">
     <link href="css/default.css" class="theme" rel="stylesheet" media="screen">
     <link href="css/common.css" rel="stylesheet" media="screen">
   <script style="" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/13/6/%7Bcommon,util,stats%7D.js" charset="UTF-8" type="text/javascript"></script></head>
@@ -23,13 +20,13 @@
         <button type="checkbox" data-command="notes" title="View Slide Notes">✏</button>
         <button type="checkbox" data-command="source" title="View slide source">↻</button>
         <button type="checkbox" data-command="help" title="View Help">?</button>
-		Day: <a href="index.html">1</a><a href="daytwo.html">2</a><a href="day3.html">3</a><a href="day4.html">4</a><a href="day5.html">5</a> 
+		Day: <a href="index.html">1</a> <a href="daytwo.html">2</a> <a href="daythree.html">3</a> <a href="dayfour.html">4</a> <a href="dayfive.html">5</a> 
       </menu>
     </nav>
     <div class="presentation">
       <div id="presentation-counter">1</div>
       <div style="display: block;" class="slides">
-        <div class="slide" id="landing-slide">
+        <!--Landing Slide--><div class="slide" id="landing-slide">
           <style>
             #landing-slide h1, #landing-slide h2 {
               color: black;
@@ -39,7 +36,7 @@
               font-size: 70px;
             }
             #landing-slide h2 {
-              margin-top: -5px;
+              margin-top: 10px;
               font-size: 32px;
               letter-spacing: -1px;
 			  color: #333;
@@ -84,8 +81,8 @@
           </aside> 
         </div>
 		
-		<div class="slide" id="table-of-contents">
-          <header><h1>Today, we will cover...</h1></header>
+		<!--Table of contents--><div class="slide" id="table-of-contents">
+          <header>Today, we will cover...</header>
           <style>
             #toc-list > li {
               font-size: 26px;
@@ -111,7 +108,7 @@
           </section>
         <span class="counter"></span></div>
 		
-         <div class="slide" id="what-you-should-know-slide">
+		<!--What is slide--><div class="slide" id="what-is-slide">
 			<style>
 				#what-is-slide p{
 					font-size: 32px;
@@ -119,315 +116,92 @@
 				}
 			</style>
           <section>
-            <header>What you should know</header>
+            <header>What is jQuery?</header>
             <p>
-				You will be provided most of the HTML and CSS code for your project later in the class, but a you should have at least a basic knowledge of HTML and CSS.
+                jQuery is "The Write Less, Do More, Javascript Library".
+            </p>
+            <p>
+                The purpose of jQuery is to make it easier to use JavaScript on your website. jQuery takes common tasks that require many lines of JavaScript and wraps it
+                into methods that you can call with a single line of code.
 			</p>
-			<p>
-				What you need to get started programming with Javascript
-			</p>
-			<ul>
-				<li>Web Browser</li>
-				<li>Text Editor</li>
-				<li>Developer Tools for your browser (optional)</li>
-			</ul>
-			
+            <p>
+                jQuery also simplifies things like: AJAX calls and DOM manipulation.
+            </p>
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="what-is-slide">
-			<style>
-				#what-is-slide p{
-					font-size: 32px;
-					line-height: 54px;
-				}
-			</style>
-          <section>
-            <header>What is Javascript?</header>
-            <p>Javascript is an easy-to-use programming language that can be embedded in the header of your web pages. 
-			It can enhance the dynamics and interactive features of your page by allowing you to perform calculations, 
-			check forms, write interactive games, add special effects, customize graphics selections, create security passwords and more.
-			</p><p>
-			JavaScript is inserted into HTML using <code>&lt;script&gt;&lt;/script&gt;</code> tags.</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="java-vs-javascript-slide">
-          <header>Java vs. Javascript</header>
+		<!--Why jQuery--><div class="slide" id="why-jquery-slide">
+          <header>Why jQuery?</header>
           <section>
             <p>
-			Actually, the 2 languages have almost nothing in common except for the name. Java is not considered an easy-to-use language for non-programmers.<br/>
-Javascript is much simpler to use than Java. With Javascript, if I want check a form for errors, I just type an if-then statement at the top of my page. No compiling, no applets, just a simple sequence.
+				While there are plenty other JavaScript frameworks to choose from, jQuery is the most popular and also the most extendable.
+            </p>
+            <p>
+            <h1> Many of the biggest companies use jQuery</h1>
+                <img src="img/google.png" width="235"/>
+                <img src="img/microsoft.png" width="240"/>
+                <img src="img/IBM.png" style="padding-right:20px;" width="150"/>
+                <img src="img/netflix.png" width="175"/>
 			</p>
           </section>
         <span class="counter"></span></div>
+        
+        <!-- functions exercise 2--><div class="slide" id="events-excercise-slide">
+            <header>Excercise 3 - Events</header>
+            <style>
+                #events-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>Get the values from input boxes and call function to display order</h1>
+                        <ul>
+                            <li>Create an input box for Sandwich, Quantity and Price</li>
+                            <li>Create a "Place Order" button</li>
+                            <li>When the button is clicked call a new <code>placeOrder</code> function, that gets the input values and displays the order in a div</li>
+                        </ul>
+            </section>
+        </div>
+        
+		<!--events answer slide--><div class="slide" id="events-excercise-answer-slide">
+          <header>Excercise 3 Answer</header>
+          <section>
+<pre class="prettyprint linenums">
+&lt;p&gt;Sandwich:&lt;input type='text' id='sandwich'/&gt;&lt;/p&gt;
+&ltp&gt;Quantity:&lt;input type='text' id='quantity'/&gt;&lt;/p&gt;
+&lt;p&gt;Price:&lt;input type='text' id='price'/&gt;&lt;/p&gt;
+&lt;button id='placeOrder'&gt;Place Order&lt;/button&gt;
+&lt;div id='yourOrder'&gt;Order Not Placed&lt;/div&gt;
 
-        <div class="slide" id="oop-slide">
-          <header>Object Oriented Programming</header>
-          <section>
-            <p>OOP is a programming technique designed to simplify complicated programming concepts.</p>
-			<br/>
-			<p>
-			Object-oriented programming consists of:
-			</p>
-			<ul>
-				<li>
-					Objects - "Everything" in JavaScript is an Object: a String, a Number, an Array, a Date....
-				</li>
-			</ul>
-			<p>In JavaScript, an object is data, with properties and methods.</p>
-			<ul>
-				<li>
-					Properties - Variables created inside an object.
-				</li>
-				<li>
-					Methods - Methods are actions that objects can perform.
-				</li>
-			</ul>
-<pre>
-	&lt;script&gt;
-		var myObject = {
-				//This is a property
-				name : "myObject",
-				//This is a method, it gets the name property of myObject
-				getName : function(){
-					alert('name: ' + this.name);
-				}
-			}
-	&lt;/script&gt;
+&lt;script&gt;
+var placeOrderBtn = document.getElementById('placeOrder');
+placeOrderBtn.addEventListener('click', getOrder, false);
+
+function getOrder(){
+    var sandwich = document.getElementById('sandwich').value;
+    var quantity = document.getElementById('quantity').value;
+    var price = document.getElementById('price').value;
+    
+    var total = price * quantity;
+    var sentence = "Order: " + sandwich + " Quantity: " + quantity + " Price: $" + price + " Total: $" + total;
+    
+    var displayOrderDiv = document.getElementById('yourOrder');
+    displayOrderDiv.innerHTML = sentence;
+}
+&lt;/script&gt;
 </pre>
           </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="events-slide">
+        </div>
+        
+        <!--copy me<div class="slide" id="events-slide">
           <header>Events</header>
           <section>
             <p>
-			Events are how we trigger our functions to run. The easiest example is a button, whose definition includes the words onClick="run_my_function()". <br/><br/>
-			The onClick event, as its name implies, will run the function when the user clicks on the button. Other events include OnMouseOver, OnMouseOut, OnFocus, OnBlur, OnLoad, and OnUnload. 
-			</p>
-			<br/>
-<pre>
-	&lt;script&gt;
-		element = document.getElementById('myButton');
-		element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-	&lt;/script&gt;
-	<br/>
-	<button id="myButton">Click Me!</button>
-	<script>
-		element = document.getElementById('myButton');
-		element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-	</script>
-</pre>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="running-javascript-code-slide">
-          <header>Running Javascript Code</header>
-          <section>
-            <p>
-			External
-			<pre><code>&lt;script src='file.js'&gt;&lt;/script&gt;</code></pre>
-			Inline
-			<pre><code>&lt;script&gt;<br/>alert("Hello Class!");<br/>&lt;/script&gt;</code></pre>
-			Attributes
-			<pre><code>&lt;button onClick="alert('GoodBye!');"&gt;Click Me!&lt;/button&gt;</code></pre>
-			</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="commenting-code-slide">
-          <header>Commenting Code</header>
-          <section>
-            <p>
-			JavaScript supports single and multi-line comments. Comments are ignored by the JavaScript engine, they have no effect on the outcome of the program. Comments should be used to document code for other developers.
-			<pre><code>// This is a single line comment<br/><br/>/*<br/>* this is an<br/>* example of <br/>* a multi-line<br/>* comment<br/>*/</code></pre>
-			</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="identifiers-slide">
-          <header>Identifiers</header>
-          <section>
-            <p>
-			Identifiers are used to give variables and functions a unique name so they can later  be referred to by that name.
-			The name of the identifiers must follow these rules:
-			<ul>
-				<li>Can not be a reserved word</li>
-				<li>Can only contain letters, numbers, dollar signs, and underscores</li>
-				<li>Can not start with a number</li>
-			</ul>
-			</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="variables-slide">
-          <header>Variables</header>
-          <section>
-            <p>
-			Variables can be defined using multiple <code>var</code> statements or in a single combined statement.<br/>
-			Variables assigned without a value are given a value of <code>undefined</code>
-			<pre><code>&lt;script&gt;<br/>var y;<br/>y===undefined; //This statement is true<br/>&lt;/script&gt;</code></pre>
-			<pre><code>&lt;script&gt;var test = 1;<br/>&lt;/script&gt;</code></pre>
-			</p>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="types-slide">
-          <header>Types</header>
-          <section>
-            <p>
-			Types in JavaScript fall into two categories: primitives and objects.
-			</p>
-			<p>
-			Primitive types include -
-			</p>
-			<ul>
-				<li>String</li>
-				<li>Number</li>
-				<li>Boolean</li>
-				<li>null</li>
-				<li>undefined</li>
-			</ul>
-			<p>
-			Everything else in JavaScript is considered an object. 	
-			<br/><br/>
-			JavaScript has numerous built-in objects. We will mostly focus on:
-			</p>
-			<ul>
-			<li>Object</li>
-			<li>Array</li>
-			<li>Function</li>
-			</ul>
-          </section>
-        <span class="counter"></span></div>
-		
-		<div class="slide" id="conditional-code-slide">
-          <header>Conditional Code</header>
-          <section>
-            <p>
-				Using <code>if</code> and <code>else</code> statements we can run code if certain conditions are met.
-			</p>
-<pre>
-&lt;script&gt;
-	var foo = true;
-	var bar = false;
-	
-	if( bar ){ //Check if bar is true
-		//This code will never run because bar === false
-		console.log( "I wont run!" );
-	}
-	
-	if( foo ){ //Check if foo is true
-		//This code will run because foo is true
-		console.log( "I am true!" );
-	}
-	
-&lt;/script&gt;
-</pre>
-			
-          </section>
-        <span class="counter"></span></div>
-
-		<div class="slide" id="loops-slide">
-			<header>Loops</header>
-			<section>
-				<p>
-					We create loops in order to run certain code a number of times.
-				</p>
-				<p> 
-					The <code>for</code> loop loops over the code block until the condition (i &lt; 5) becomes false.
-				</p>
-<pre>
-&lt;script&gt;
-	for( var i = 0; i < 5; i++ ){
-		console.log("Loop #: " + i);
-	}	
-&lt;/script&gt;
-</pre>
-				<p> 
-					The <code>while</code> loop will execute the code body until it's condition evaluates to false.
-				</p>
-<pre>
-&lt;script&gt;
-	var i = 0;
-	while( i < 5 ){
-		console.log("While #: " + i);
-		i++;
-	}	
-&lt;/script&gt;
-</pre>
-				<div class="well well-info row-fluid">
-					<div class="span1">
-						<i class="icon-question-sign icon-white"></i> 
-					</div>
-					<div class="span11">
-						Wait! These seem the same! Which one should I use!?
-						<br/>
-						It's really up to you, neither is technically right or wrong. 
-						<br/>You will learn to use whichever one best fits the situation or your preference.
-					</div>
-				</div>
-			</section>
-		</div>
-			
-		<div class="slide" id="popup-boxes-slide">
-			<header>Popup Boxes</header>
-			<section>
-				<h2>Alert: <code>alert("I am an Alert Box!");</code></h2>
-				Alert boxes are often used to provide information to the users. As a developer you can use them to help debug code.<br/><br/>
-				<img src="img/alert.png"/>
-				<h2>Prompt: <code>prompt("I am a Prompt Box! Tell me your name!");</code></h2>
-				A prompt box can be used if you want the user to input a value before entering a page.<br/><br/>
-				<img src="img/prompt.png"/>
-				<h2>Confirm: <code>confirm("I am a Confirm Box! Continue?");</code></h2>
-				A confirm box can be used if you want the user to verify or accept something.<br/><br/>
-				<img src="img/confirm.png"/>
-			</section>
-		</div>	
-		
-		<div class="slide" id="arrays-slide">
-			<header>Arrays</header>
-				<section>
-					<p>
-						Arrays are zero-indexed, ordered lists of values. They are used to store a set of related items of the same type, thought they can include multiple types of items, including other arrays.
-					</p>
-					<p>
-						You can create an array using either the object constructor or the literal declaration. You can then assign the variables a list of values after the declaration.
-					</p><br/>
-<pre class="prettyprint linenums">
-	// Simple array with constructor
-	var constructorArray = new Array("Hello", "World");
-	// Literal Declaration, this is the preferred way to create an array
-	var literalArray = ["Hello", "World"];
-</pre>
-<br/>
-					<p class="alert alert-info">
-						Using the literal declaration is preferred as the object constructor can be error prone due to its arguments.
-					</p>
-				</section>
-			</div>
-      
-		<div class="slide" id="changing-html-slide">
-			<header>Change HTML with JavaScript</header>
-				<section>
-				<h2>Write to Document</h2>
-<pre class="prettyprint linenums">
-&lt;script&gt;
-	document.write("&lt;p&gt;JavaScript added to document&lt;/p&gt;");
-&lt;/script&gt;
-</pre>
 				
-			<h2>Changing HTML elements with JavaScript</h2>
-<pre>
-//we will use JavaScript to change the content of this object
-&lt;div id="change_me"&gt;Normal HTML content&lt;/div&gt;
-&lt;script&gt;
-	document.getElementById("change_me").innerHTML="JavaScript Content";
-&lt;/script&gt;
-</pre>
-			</section>
-			</div>
+			</p>
+          </section>
+        <span class="counter"></span></div>-->
 			
 		<div class="slide" id="project-desc-slide">
 			<header>The Sub Shop</header>
@@ -436,6 +210,20 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
 					<p>
 					
 					</p>
+				</section>
+			</div>
+	  
+	  <div class="slide" id="project-instructions-slide">
+			<header>The Sub Shop</header>
+				<section>
+					<ul>
+						<li>Get the HTML code - </li>
+						<li>Create .js file and include it</li>
+						<li>Make the place order button alert "Order Placed"</li>
+						<li>Create additional arrays of toppings</li>
+						<li>Fill select boxes with content from arrays</li>
+						<li>Make alert display selcted items</li>
+					</ul>
 				</section>
 			</div>
 	  

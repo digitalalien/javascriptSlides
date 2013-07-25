@@ -20,7 +20,7 @@
         <button type="checkbox" data-command="notes" title="View Slide Notes">✏</button>
         <button type="checkbox" data-command="source" title="View slide source">↻</button>
         <button type="checkbox" data-command="help" title="View Help">?</button>
-		Day: <a href="index.html">1</a> <a href="daytwo.html">2</a> <a href="day3.html">3</a> <a href="day4.html">4</a> <a href="day5.html">5</a> 
+		Day: <a href="index.html">1</a> <a href="daytwo.html">2</a> <a href="daythree.html">3</a> <a href="dayfour.html">4</a> <a href="dayfive.html">5</a> 
       </menu>
     </nav>
     <div class="presentation">
@@ -234,7 +234,7 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
                     </div>
                 </div>
             </section>
-		</div>
+		<span class="counter"></span></div>
 		
         <!--running javascript--><div class="slide" id="running-javascript-code-slide">
           <header>Running Javascript Code</header>
@@ -247,32 +247,6 @@ Javascript is much simpler to use than Java. With Javascript, if I want check a 
 			Attributes
 			<pre><code>&lt;button onClick="alert('GoodBye!');"&gt;Click Me!&lt;/button&gt;</code></pre>
 			</p>
-          </section>
-        <span class="counter"></span></div>
-        
-        <!--events--><div class="slide" id="events-slide">
-          <header>Events</header>
-          <section>
-            <p>
-				Events are how we trigger our functions to run. The easiest example is a button, whose definition includes the words onClick="run_my_function()".
-			</p>
-			<p>
-			The onClick event, as its name implies, will run the function when the user clicks on the button. Other events include OnMouseOver, OnMouseOut, OnFocus, OnBlur, OnLoad, and OnUnload. 
-			</p>
-<pre class="prettyprint linenums">
-&lt;button onclick="run_my_function();"&gt;Click Me&lt;/button&gt;
-</pre>
-			
-<pre class="prettyprint linenums">
-element = document.getElementById('myButton');
-element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-<br/>
-</pre>
-<button id="myButton">Click Me!</button>
-<script>
-    element = document.getElementById('myButton');
-    element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
-</script>
           </section>
         <span class="counter"></span></div>
         
@@ -385,7 +359,7 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
           </section>
         <span class="counter"></span></div>
         
-        <div class="slide" id="getting-results-slide">
+        <!--Getting results--><div class="slide" id="getting-results-slide">
           <header>Seeing the results</header>
           <section>
               <p>
@@ -401,6 +375,7 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
               </p>
           </section>
         </div>
+        
         <!--questions and open pc--><div class="slide" id="questions-open-pc-slide">
             <header>Any ?'s</header>
             <section>
@@ -435,7 +410,6 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
                 }
             </style>
             <section>
-                <h1>SubShop</h1>
                 <ul>
                     <li>
                         Store the folowing in variables:
@@ -453,7 +427,7 @@ element.onclick = function myButtonClicked(){ alert("I was Clicked"); }
             </section>
         </div>
         
-		<div class="slide" id="variables-excercise-answer-slide">
+		<!--variables answer slide--><div class="slide" id="variables-excercise-answer-slide">
           <header>Excercise 1 Answer</header>
           <section>
 <pre class="prettyprint linenums">
@@ -468,10 +442,30 @@ document.write(sentence);
 </pre>
           </section>
         </div>
-				
 		
-		
-		<div class="slide" id="conditional-code-slide">
+        <!--arrays--><div class="slide" id="arrays-slide">
+			<header>Arrays</header>
+				<section>
+					<p>
+						Arrays are zero-indexed, ordered lists of values. They are used to store a set of related items of the same type, thought they can include multiple types of items, including other arrays.
+					</p>
+					<p>
+						You can create an array using either the object constructor or the literal declaration. You can then assign the variables a list of values after the declaration.
+					</p><br/>
+<pre class="prettyprint linenums">
+	// Simple array with constructor
+	var constructorArray = new Array("Hello", "World");
+	// Literal Declaration, this is the preferred way to create an array
+	var literalArray = ["Hello", "World"];
+</pre>
+<br/>
+					<p class="alert alert-info">
+						Using the literal declaration is preferred as the object constructor can be error prone due to its arguments.
+					</p>
+				</section>
+			</div>
+        
+		<!--conditional code slide--><div class="slide" id="conditional-code-slide">
           <header>Conditional Code</header>
           <section>
             <p>
@@ -498,7 +492,7 @@ document.write(sentence);
           </section>
         <span class="counter"></span></div>
 
-		<div class="slide" id="loops-slide">
+		<!--loops slide--><div class="slide" id="loops-slide">
 			<header>Loops</header>
 			<section>
 				<p>
@@ -540,7 +534,7 @@ document.write(sentence);
 			</section>
 		</div>
 			
-		<div class="slide" id="popup-boxes-slide">
+		<!--popup boxes--><div class="slide" id="popup-boxes-slide">
 			<header>Popup Boxes</header>
 			<section>
 				<h2>Alert: <code>alert("I am an Alert Box!");</code></h2>
@@ -554,30 +548,164 @@ document.write(sentence);
 				<img src="img/confirm.png"/>
 			</section>
 		</div>	
-		
-		<div class="slide" id="arrays-slide">
-			<header>Arrays</header>
-				<section>
-					<p>
-						Arrays are zero-indexed, ordered lists of values. They are used to store a set of related items of the same type, thought they can include multiple types of items, including other arrays.
-					</p>
-					<p>
-						You can create an array using either the object constructor or the literal declaration. You can then assign the variables a list of values after the declaration.
-					</p><br/>
-<pre class="prettyprint linenums">
-	// Simple array with constructor
-	var constructorArray = new Array("Hello", "World");
-	// Literal Declaration, this is the preferred way to create an array
-	var literalArray = ["Hello", "World"];
-</pre>
-<br/>
-					<p class="alert alert-info">
-						Using the literal declaration is preferred as the object constructor can be error prone due to its arguments.
-					</p>
-				</section>
-			</div>
       
-		<div class="slide" id="changing-html-slide">
+        <!--functions--><div class="slide" id="functions-slide">
+            <header>
+                Functions
+            </header>
+            <section>
+                <p>Functions contain re-usable blocks of code. Functions can take zero or more arguments and can return a value.</p>
+                <h1>Creating a function</h1>
+<pre class='prettyprint linenums'>
+function myNameIs(){
+    console.log('Andrew');
+}
+</pre>
+OR
+<pre class='prettyprint linenums'>
+var myNameIs = function(){
+    console.log('Andrew');
+};
+</pre>
+<h1>Calling a function</h1>
+<pre class='prettyprint linenums'>
+myNameIs();
+</pre>
+            </section>
+        <span class="counter"></span></div>
+        
+        <!--function parameters--><div class="slide" id="function-parameters-slide">
+            <header>
+                Function Parameters
+            </header>
+            <section>
+                <p>You can pass any number of named arguments to a function.</p>
+<pre class='prettyprint linenums'>
+function myNameIs(name){
+    console.log('Hi! My name is ' + name);
+}
+
+myNameIs('Andrew');
+myNameIs('Derrick');
+</pre>
+
+<pre class='prettyprint linenums'>
+function calculateTotal(price, qty){
+    var total = price * qty;
+    console.log(total);
+}
+
+calculateTotal(3.89, 8);
+calculateTotal(4.34, 3);
+</pre>
+
+            </section>
+        <span class="counter"></span></div>
+        
+        <!--function returning values--><div class="slide" id="returning-values-slide">
+            <header>
+                Returning values from a function
+            </header>
+            <section>
+                <p>The <code>return</code> keyword will return a value from the function and exit the function.</p>
+<pre class='prettyprint linenums'>
+function calculateTotal(price, qty){
+    var total = price * qty;
+    return total;
+}
+
+var order1 = calculateTotal(3.89, 8);
+var order2 = calculateTotal(4.34, 3);
+
+var ordersTotal = order1 + order2;
+
+//you could even do this
+var ordersTotal = calculateTotal(3.89, 8) + calculateTotal(4.34, 3); 
+</pre>
+
+            </section>
+        <span class="counter"></span></div>
+        
+        <!-- functions exercise 2--><div class="slide" id="functions-excercise-slide">
+            <header>Excercise 2 - Functions</header>
+            <style>
+                #functions-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>Using Excercise 1 create a function named <code>getOrder</code> that:</h1>
+                        <ul>
+                            <li>takes 3 arguments - sandwich, quantity, and price</li>
+                            <li>Calculates the total cost of the order</li>
+                            <li>Outputs the order information</li>
+                            <li>Call the function 3 or more times with different values for the arguments</li>
+                        </ul>
+                    
+            </section>
+        </div>
+        
+		<!--functions answer slide--><div class="slide" id="functions-excercise-answer-slide">
+          <header>Excercise 2 Answer</header>
+          <section>
+<pre class="prettyprint linenums">
+function getOrder(sandwich, quantity, price){
+    var total = price * quantity;
+    var sentence = "Order: " + sandwich + " Quantity: " + quantity + " Price: $" + price + " Total: " + total;
+    document.write(sentence);
+}
+
+getOrder('Chicken Bacon Ranch', 2, 6.99);
+getOrder('Melt', 1, 5.00);
+getOrder('The Dagwood', 3, 15.98);
+</pre>
+          </section>
+        </div>
+        
+        <!--events--><div class="slide" id="events-slide">
+          <header>Events</header>
+          <section>
+            <p>
+				Events are how we trigger our functions to run. The easiest example is a button, whose definition includes the words onClick="run_my_function()".
+			</p>
+            <p>
+                Events allow us to do things like:
+            <ul><li>Form Validation</li><li>Games</li><li>Interactive Photo Galleries</li><li>Lots more things that involve user interaction.</li></ul>
+            </p>
+            <h1>Event types include but are not limited to:</h1>
+            <ul>
+                <li>Mouse Events - click, dblclick, mouseup, mousedown, etc.</li>
+                <li>Keyboard Events - keyup, keydown, keypress</li>
+                <li>Form Events - onblur, onchange, onfocus, onsubmit, etc</li>
+                <li>Touch Events - touchstart, touchend, touchmove, touchenter, etc.</li>
+            </ul>
+          </section>
+        <span class="counter"></span></div>
+        
+        <!--event listeners--><div class="slide" id="event-listeners-slide">
+          <header>Adding Event Listeners</header>
+          <section>
+            <p>
+				You can set certain functions to run when an event is triggered by the user. These functions will "listen" for the event and then initiate the function.
+			</p>
+            <p>addEventListener works in these major browsers</p>
+            <img src="img/browser_logos.png"/>
+            <p class="alert alert-info">Note: The addEventListener method is supported in Internet Explorer since Version 9</p>
+<pre class="prettyprint linenums">
+&lt;button id="clickMe"&gt;Please Click ME!&lt;/button&gt;
+&lt;script&gt;
+    function clickedMe(){
+        console.log('You Clicked Me!');
+    }
+    var clickMeButton = document.getElementById('clickMe');
+    clickMeButton.addEventListener('click', clickedMe, false);
+&lt/script&gt;
+</pre>
+          </section>
+        <span class="counter"></span></div>
+        
+        <!--changing html--><div class="slide" id="changing-html-slide">
 			<header>Change HTML with JavaScript</header>
 				<section>
 				<h2>Write to Document</h2>
@@ -597,6 +725,63 @@ document.write(sentence);
 </pre>
 			</section>
 			</div>
+        
+        <!-- functions exercise 2--><div class="slide" id="events-excercise-slide">
+            <header>Excercise 3 - Events</header>
+            <style>
+                #events-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>Get the values from input boxes and call function to display order</h1>
+                        <ul>
+                            <li>Create an input box for Sandwich, Quantity and Price</li>
+                            <li>Create a "Place Order" button</li>
+                            <li>When the button is clicked call a new <code>placeOrder</code> function, that gets the input values and displays the order in a div</li>
+                        </ul>
+            </section>
+        </div>
+        
+		<!--events answer slide--><div class="slide" id="events-excercise-answer-slide">
+          <header>Excercise 3 Answer</header>
+          <section>
+<pre class="prettyprint linenums">
+&lt;p&gt;Sandwich:&lt;input type='text' id='sandwich'/&gt;&lt;/p&gt;
+&ltp&gt;Quantity:&lt;input type='text' id='quantity'/&gt;&lt;/p&gt;
+&lt;p&gt;Price:&lt;input type='text' id='price'/&gt;&lt;/p&gt;
+&lt;button id='placeOrder'&gt;Place Order&lt;/button&gt;
+&lt;div id='yourOrder'&gt;Order Not Placed&lt;/div&gt;
+
+&lt;script&gt;
+var placeOrderBtn = document.getElementById('placeOrder');
+placeOrderBtn.addEventListener('click', getOrder, false);
+
+function getOrder(){
+    var sandwich = document.getElementById('sandwich').value;
+    var quantity = document.getElementById('quantity').value;
+    var price = document.getElementById('price').value;
+    
+    var total = price * quantity;
+    var sentence = "Order: " + sandwich + " Quantity: " + quantity + " Price: $" + price + " Total: $" + total;
+    
+    var displayOrderDiv = document.getElementById('yourOrder');
+    displayOrderDiv.innerHTML = sentence;
+}
+&lt;/script&gt;
+</pre>
+          </section>
+        </div>
+        
+        <!--copy me<div class="slide" id="events-slide">
+          <header>Events</header>
+          <section>
+            <p>
+				
+			</p>
+          </section>
+        <span class="counter"></span></div>-->
 			
 		<div class="slide" id="project-desc-slide">
 			<header>The Sub Shop</header>
