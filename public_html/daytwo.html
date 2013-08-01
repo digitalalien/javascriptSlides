@@ -85,8 +85,8 @@
           </aside> 
         </div>
 		
-		<div class="slide" id="table-of-contents">
-          <header><h1>Today, we will cover...</h1></header>
+		<!--table of contents--><div class="slide" id="table-of-contents">
+          <header>Today, we will cover...</header>
           <style>
             #toc-list > li {
               font-size: 26px;
@@ -112,7 +112,7 @@
           </section>
         <span class="counter"></span></div>
 		
-         <div class="slide" id="operators-slide">
+         <!--operators--><div class="slide" id="operators-slide">
           <section>
             <header>Operators</header>
             <p>
@@ -145,15 +145,15 @@
           </section>
         <span class="counter"></span></div>
 		
-		<div class="slide" id="arithmetic-operators-slide">
+		<!--arithmetic operators--><div class="slide" id="arithmetic-operators-slide">
 		<style>
 			#arithmetic-operators-slide table{
 				width: 100%;
 			}
 			
 		</style>
+        <header>Arithmetic Operators</header>
           <section>
-            <header>Arithmetic Operators</header>
             <p>
 				Arithmetic Operators are used to perform arithmetic between variable and/or values.
 			</p>
@@ -190,14 +190,14 @@
           </section>
         <span class="counter"></span></div>
 	  
-	  <div class="slide" id="assignment-operators-slide">
-		<style>
-			#assignment-operators-slide table{
-				width: 100%;
-			}
-		</style>
+        <!--assignment operators--><div class="slide" id="assignment-operators-slide">
+            <style>
+                #assignment-operators-slide table{
+                    width: 100%;
+                }
+            </style>
+          <header>Assignment Operators</header>
           <section>
-            <header>Assignment Operators</header>
             <p>
 				Assignment Operators are used to assign values to variables.
 			</p>
@@ -224,7 +224,334 @@
 			</table>	
           </section>
         <span class="counter"></span></div>
+        
+       <!--Comparison Operators--><div class="slide" id="comparison-operators-slide">
+          <header>Comparison Operators</header>
+          <section>
+            <p>
+				Comparison operators are used in logical statements to determine if variables or values are equal or different.
+			</p>
+            (y = 5)
+            <table class="table table-bordered">
+				<tr>
+					<td><code>==</code></td><td>is equal to</td>
+                    <td colspan="2">
+                        <table class="table table-bordered" style="padding:0; margin: 0;">
+                            <tr>
+                                <td><code>y == 10</code></td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td><code>y == 5</code></td><td>true</td>
+                            </tr>
+                        </table>
+                    </td>
+				</tr>
+				<tr>
+					<td><code>===</code></td><td>is exactly equal to (compares value and type)</td>
+                    <td colspan="2">
+                         <table class="table table-bordered" style="padding:0; margin: 0;">
+                            <tr>
+                                <td><code>y === "5"</code></td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td><code>y === 5</code></td><td>true</td>
+                            </tr>
+                        </table>
+                    </td>
+				</tr>
+				<tr>
+					<td><code>!=</code></td><td>is not equal</td><td><code>y!=8</code></td><td>true</td>
+				</tr>
+				<tr>
+					<td><code>!==</code></td><td>is not equal to (compares value and type)</td>
+                    <td colspan="2">
+                         <table class="table table-bordered" style="padding:0; margin: 0;">
+                            <tr>
+                                <td><code>y !== "5"</code></td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td><code>y !== 5</code></td><td>false</td>
+                            </tr>
+                        </table>
+                    </td>
+				</tr>
+                <tr>
+					<td><code>></code></td><td>is greater than</td><td><code>y>8</code></td><td>false</td>
+				</tr>
+                <tr>
+					<td><code><</code></td><td>is less than</td><td><code>y<8</code></td><td>true</td>
+				</tr>
+                <tr>
+					<td><code>>=</code></td><td>is greater than or equal</td><td><code>y>=8</code></td><td>false</td>
+				</tr>
+                <tr>
+					<td><code><=</code></td><td>is less than or equal</td><td><code>y<=8</code></td><td>true</td>
+				</tr>
+			</table>
+            
+            <p>You can compare strings too</p>
+            <table class='table table-bordered'>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+          </section>
+        <span class="counter"></span></div>
 	  
+        <!--Logical Operators--><div class="slide" id="logical-operators-slide">
+          <header>Logical Operators</header>
+          <section>
+            <p>
+				Logical operators are used to determine the logic between variables or values.
+			</p>
+            (x=5 and y=10)
+            <table class="table table-bordered">
+                <tr>
+                    <td><code>&&</code></td><td>and</td><td><code>(x>4 && y<12)</code></td><td>true</td>
+                </tr>
+                <tr>
+                    <td><code>||</code></td><td>or</td><td><code>(x==3 || y==3)</code><td>false</td>
+                </tr>
+                <tr>
+                    <td><code>!</code></td><td>not</td><td><code>!(x==y)</code></td><td>false</td>
+                </tr>
+            </table>
+            <p>Example statement</p>
+<pre class="prettyprint linenums">
+$myAge = 31;
+$minAge = 18;
+$maxAge = 40;
+
+if($myAge >= $minAge && $myAge <= $maxAge){
+    $access = "Granted"; //true
+}else{
+    $access = "Denied"; //false
+}
+</pre>
+          </section>
+      </div>
+      
+     <!-- Operators exercise 4--><div class="slide" id="operators-excercise-slide">
+            <header>Excercise 4 - Operators</header>
+            <style>
+                #operators-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>Using the code from Excercise 3</h1>
+                        <ul>
+                            <li>Add a function called <code>validateOrder</code> that takes sandwich, quantity and price as arguments</li>
+                            <li>inside the <code>validateOrder</code> function check that each input contains a value</li>
+                            <li>if any value is missing the function should return <code>false</code> and alert an error message</li>
+                            <li>if the values are all there the program should display the order</li>
+                        </ul>
+            </section>
+        <span class="counter"></span></div>
+        
+		<!--operators answer slide--><div class="slide" id="operators-excercise-answer-slide">
+          <header>Excercise 4 Answer</header>
+          <section>
+<pre class="prettyprint linenums">
+
+var placeOrderBtn = document.getElementById('placeOrder');
+placeOrderBtn.addEventListener('click', getOrder, false);
+
+function validateOrder(sandwich, quantity, price) {
+    if (sandwich == '' || quantity == '' || price == '') {
+        return false;
+    }
+    return true;
+}
+
+function getOrder() {
+    var sandwich = document.getElementById('sandwich').value;
+    var quantity = document.getElementById('quantity').value;
+    var price = document.getElementById('price').value;
+    if (validateOrder(sandwich, quantity, price)) {
+        var total = price * quantity;
+        var sentence = "Order: " + sandwich + " Quantity: " + quantity + " Price: $" + price + " Total: $" + total;
+        var displayOrderDiv = document.getElementById('yourOrder');
+        displayOrderDiv.innerHTML = sentence;
+    } else {
+        alert('All fields are required');
+    }
+}
+</pre>
+          </section>
+      <span class="counter"></span></div>
+        
+         <!--objects slide--><div class="slide" id="objects-slide">
+          <header>Objects</header>
+          <section>
+            <p>
+                Everything in JavaScript is an Object: a String, a Number, an Array, a Date, etc.
+			</p>
+			<p>In JavaScript, an object is data, with properties and methods.</p>
+			<ul>
+				<li>
+					Properties - Variables created inside an object.
+				</li>
+				<li>
+					Methods - Methods are actions that objects can perform.
+				</li>
+			</ul>
+            <div class="well">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <h2>Properties:</h2>
+                        <p>car.name = Kia</p>
+                        <p>car.model = Optima</p>
+                        <p>car.hp = 270</p>
+                        <p>car.color = black</p>
+                    </div>
+                    <div class="span6">
+                        <img src='img/kia.png'/>
+                    </div>
+                    <div class="span3">
+                        <h2>Methods</h2>
+                        <p>car.start()</p>
+                        <p>car.drive()</p>
+                        <p>car.stop()</p>
+                        <p>car.accelerate()</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+        <span class="counter"></span></div>
+        
+        <!--Creating an object--><div class='slide' id='creating_an_object_slide'>
+            <header>Creating Objects</header>
+            <section>
+                <p>There are three ways to create an object. The one you use will depend on the situation.</p>
+                <h2>Example 1</h2>
+                <p>You'll want to create your object in this way if you need to create several similar objects.</p>
+<pre class='prettyprint linenums'>
+function Car(name, model, hp, color){
+    this.name = name;
+    this.model = model;
+    this.hp = hp;
+    this.color = color;
+    this.start = function(){
+        alert(this.name +' ' + this.model + ' has started.');
+    }
+}
+
+car1 = new Car('Kia', 'Optima', '270', 'Black');
+car1.start();
+
+car2 = new Car('Ferrari', '458', '562', 'Red');
+car2.start();
+</pre>
+            </section>
+        <span class='counter'></span></div>
+        
+         <!--Creating an object 2--><div class='slide' id='creating_an_object_example_2_slide'>
+            <header>Creating Objects</header>
+            <section>
+                <p>There are three ways to create an object. The one you use will depend on the situation.</p>
+                <h2>Example 2</h2>
+                <p>Use this way if you only want to create one object of a kind.</p>
+<pre class='prettyprint linenums'>
+var Car = {
+    name: 'Kia',
+    model: 'Optima',
+    hp: '270',
+    color: 'Black',
+    start: function(){
+        alert(this.name + ' ' + this.model + ' has started.');   
+    }
+}
+
+Car.start();
+
+//You can change the properties but it is still the same object, (it used to be a Kia Optima we just stuck a Ferrari badge on it)
+Car.name = 'Ferrari';
+Car.model = '458';
+Car.start();
+</pre>
+            </section>
+        <span class='counter'></span></div>
+        
+      <!--Creating an object 3--><div class='slide' id='creating_an_object_example_3_slide'>
+            <header>Creating Objects</header>
+            <section>
+                <p>There are three ways to create an object. The one you use will depend on the situation.</p>
+                <h2>Example 3</h2>
+                <p>Use this way if you need to set propeties dynamically</p>
+<pre class='prettyprint linenums'>
+Car = new Object();
+
+Car.name = 'Ferrari';
+Car.model = '458';
+Car.start = function(){
+    alert(this.name + ' ' + this.model + ' has started.');
+}
+
+Car.start();
+
+var dynamicProperty = 'speed';
+Car[dynamicProperty] = '202mph';
+
+Car.drive = function(){
+     alert('Car ' + dynamicProperty + ' = ' + this[dynamicProperty]);   
+}
+
+Car.drive();
+</pre>
+            </section>
+        <span class='counter'></span></div>
+        
+        <!--Accessing object properties--><div class='slide' id='accessing_object_properties_slide'>
+            <header>Accessing Properties</header>
+            <section>
+                <h2>Using "dot notation"</h2>
+                <pre class='prettyprint linenums'>
+var Car = {
+    name: 'Kia',
+    model: 'Optima',
+}
+
+var myCar = Car.name;
+</pre>
+                
+              <h2>Using "bracket notation"</h2>
+ <pre class='prettyprint linenums'>
+var Car = {
+    name: 'Kia',
+    model: 'Optima',
+}
+
+var myCar = Car['name'];
+</pre>
+              <p class="alert alert-info">
+                  What's the difference?<br/>
+                  "dot notation" properties must be valid JavaScript identifiers (a sequence of alphanumeric characters including the "_" and "$") and cannot start with a number.
+                  "bracket notation" property is a string and does not have to be a valid identifier, they can have any value.
+              </p>
+            </section>
+        <span class='counter'></span></div>
+        
+     <!-- Operators exercise 4--><div class="slide" id="operators-excercise-slide">
+            <header>Excercise 5 - Objects</header>
+            <style>
+                #operators-excercise-slide li{
+                    font-size: 1.5em;
+                    line-height: 1.2em;
+                }
+            </style>
+            <section>
+                <h1>Using the code from Excercise 3</h1>
+                        <ul>
+                            <li>Create an Add Item Button to the HTML from the previous excercise</li>
+                            <li>Create an object to hold the information for a order item, It should have the properties: sandwich, quantity, and price.</li>
+                            <li> Create a method inside the object that gets the total price of the item</li>
+                            <li>Create a function called "addItem" that writes the item info (sandwich, quantity, price and total) into the "yourOrder" div</li>
+                        </ul>
+            </section>
+        <span class="counter"></span></div>
+        
       <div id="speaker-note" class="invisible" style="display: none;"></div> <!-- speaker note -->
       <aside id="help" class="sidebar invisible" style="display: hidden;">
         <table>
